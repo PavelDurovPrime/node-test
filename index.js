@@ -1,51 +1,46 @@
-function inc(n) {
-    return n+1;
+// Лабораторна робота
 
+
+function inc(n) {
+    return n + 1;   
 }
 
 const a = 5;
+const b = inc(a);
 
-const b  = inc(a);
 
-console.dir({a, b});
+console.dir({a,b});
+
+
 
 function incobj(num) {
-    num.n = num.n + 1;
+    num.n++;
 }
+
 
 const obj = {n: 5};
 incobj(obj);
-console.dir({obj});
+
+console.dir(obj);
 
 
-const arr = [true, "hello",5, 12,-200 , false , "word", 99, "JS", true ];
+
+const arr = [ true , "hello", 5 , 12, -200, false,false, "world",null , undefined , {x : 1 }, [1,2,3] , "test", 42,true ];
 
 const typesCount = {};
 
-for(const item of arr) {
-    const type = typeof item ; 
-if (typesCount[type]) {
-    typesCount[type]++;
-} else {
-    typesCount[type] = 1;   
-}
-}
-
-const arr2 = [true, "hello",5, 12, -200 , false , false, "word", null, undefined , { x :1}];
-
-
-
-for(const item of arr) {
-    const type = typeof item ;
-    if (typesCount[type]) {
-        typesCount[type]++;
+for (const item of arr) {
+    const t = typeof item;  
+    if (typesCount[t]) {
+        typesCount[t]++;
     } else {
-        typesCount[type] = 1;
+        typesCount[t] = 1;
     }   
 }
-console.log(typesCount);
 
-console.table(arr2);
+console.dir(typesCount);
+
+console.log("arr:",arr)
 
 
 
