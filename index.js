@@ -25,11 +25,15 @@ console.dir(obj);
 
 
 
-const arr = [ true , "hello", 5 , 12, -200, false,false, "world",null , undefined , {x : 1 }, [1,2,3] , "test", 42,true ];
+const arr2= [ true , "hello", 5 , 12, -200, false,false, "world",null , undefined , {x : 1 }, [1,2,3] , "test", 42,true ];
 
+let table = [];
+for (let i = 0; i < arr2.length; i += 2) {
+    table.push([arr2[i], arr2[i + 1]]);
+}
 const typesCount = {};
 
-for (const item of arr) {
+for (const item of arr2){
     const t = typeof item;  
     if (typesCount[t]) {
         typesCount[t]++;
@@ -38,9 +42,7 @@ for (const item of arr) {
     }   
 }
 
-console.dir(typesCount);
-
-console.log("arr:",arr)
+console.table(table);
 
 
 
