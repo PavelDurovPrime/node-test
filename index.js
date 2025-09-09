@@ -1,5 +1,5 @@
 function inc(n) {
-    return n+1
+    return n+1;
 
 }
 
@@ -18,7 +18,7 @@ incobj(obj);
 console.dir({obj});
 
 
-const arr = [true, 'hello',5, 12,-200 , false , 'word', 99, 'JS', true ];
+const arr = [true, "hello",5, 12,-200 , false , "word", 99, "JS", true ];
 
 const typesCount = {};
 
@@ -31,7 +31,7 @@ if (typesCount[type]) {
 }
 }
 
-const arr2= [true, 'hello',5,12, -200, false, false, 'word', null, undefined, {x:1}]
+const arr2 = [true, "hello",5, 12, -200 , false , false, "word", null, undefined , { x :1}];
 
 
 
@@ -44,5 +44,8 @@ for(const item of arr) {
     }   
 }
 console.log(typesCount);
+
+console.table(arr2);
+
 
 
